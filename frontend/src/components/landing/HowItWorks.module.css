@@ -1,0 +1,154 @@
+.section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.header {
+  margin-bottom: 4rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+/* Timeline */
+.steps {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(99, 102, 241, 0.3) 10%,
+    rgba(6, 182, 212, 0.4) 50%,
+    rgba(245, 158, 11, 0.3) 90%,
+    transparent 100%
+  );
+  transform: translateX(-50%);
+}
+
+.step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.stepLeft {
+  justify-content: flex-start;
+}
+
+.stepRight {
+  justify-content: flex-end;
+}
+
+.stepLeft .card {
+  margin-right: calc(50% + 2rem);
+}
+
+.stepRight .card {
+  margin-left: calc(50% + 2rem);
+}
+
+/* Timeline dot */
+.dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid var(--color-bg);
+  z-index: 2;
+  transition: transform 300ms ease;
+}
+
+.step:hover .dot {
+  transform: translateX(-50%) scale(1.4);
+}
+
+/* Card */
+.card {
+  position: relative;
+  padding: 1.75rem;
+  background: linear-gradient(145deg, rgba(13,20,38,0.95), rgba(17,27,53,0.8));
+  border: 1px solid rgba(99, 130, 255, 0.12);
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 440px;
+  width: 100%;
+  transition: all 300ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 130, 255, 0.3);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.5);
+}
+
+.cardAccent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  opacity: 0.6;
+}
+
+.stepNum {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.stepIcon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  display: block;
+  transition: transform 300ms ease;
+}
+
+.card:hover .stepIcon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.stepTitle {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin-bottom: 0.6rem;
+}
+
+.stepDesc {
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.65;
+}
+
+/* Mobile — linear flow */
+@media (max-width: 768px) {
+  .line { display: none; }
+  .dot { display: none; }
+
+  .stepLeft, .stepRight {
+    justify-content: center;
+  }
+
+  .stepLeft .card, .stepRight .card {
+    margin: 0;
+    max-width: 100%;
+  }
+}

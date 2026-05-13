@@ -1,0 +1,262 @@
+.section {
+  padding: 5rem 0;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.title { margin-bottom: 1rem; }
+
+/* Main 2-col grid */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.panelTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(99, 130, 255, 0.1);
+}
+
+/* Levels panel */
+.levelsPanel {
+  background: linear-gradient(145deg, rgba(13,20,38,0.95), rgba(17,27,53,0.8));
+  border: 1px solid rgba(99, 130, 255, 0.12);
+  border-radius: 20px;
+  padding: 1.75rem;
+}
+
+.levelsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.levelRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(99, 130, 255, 0.06);
+  transition: all 200ms ease;
+  animation: slideInLeft 0.5s ease both;
+}
+
+.levelRow:hover {
+  background: rgba(99, 102, 241, 0.06);
+  border-color: rgba(99, 130, 255, 0.15);
+  transform: translateX(4px);
+}
+
+.levelBadge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.levelInfo {
+  flex: 1;
+}
+
+.levelName {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+}
+
+.levelDesc {
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.levelXp {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #475569;
+  white-space: nowrap;
+}
+
+/* Leaderboard panel */
+.leaderboardPanel {
+  background: linear-gradient(145deg, rgba(13,20,38,0.95), rgba(17,27,53,0.8));
+  border: 1px solid rgba(99, 130, 255, 0.12);
+  border-radius: 20px;
+  padding: 1.75rem;
+}
+
+.lbList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.lbRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(99, 130, 255, 0.06);
+  transition: all 200ms ease;
+}
+
+.lbRow:first-child {
+  background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(239,68,68,0.04));
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+.lbRow:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.lbRank {
+  font-size: 1.2rem;
+  font-weight: 800;
+  width: 32px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.lbAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+
+.lbInfo { flex: 1; }
+
+.lbName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.lbSessions {
+  font-size: 0.72rem;
+  color: #475569;
+}
+
+.lbScore {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #6366f1;
+}
+
+/* Badges */
+.badgesSection {
+  margin-top: 1rem;
+}
+
+.badgesSectionTitle {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.badgesGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.badgeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem 0.75rem;
+  background: linear-gradient(145deg, rgba(13,20,38,0.95), rgba(17,27,53,0.8));
+  border: 1px solid rgba(99, 130, 255, 0.1);
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.badgeCard:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+.badgeIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: transform 300ms ease;
+}
+
+.badgeCard:hover .badgeIcon {
+  transform: scale(1.15) rotate(-5deg);
+  animation: badge-pop 0.4s ease;
+}
+
+.badgeName {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.badgeDesc {
+  font-size: 0.68rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-16px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes badge-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2) rotate(-8deg); }
+  100% { transform: scale(1.15) rotate(-5deg); }
+}
+
+@media (max-width: 1024px) {
+  .badgesGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .mainGrid { grid-template-columns: 1fr; }
+  .badgesGrid { grid-template-columns: repeat(2, 1fr); }
+}
