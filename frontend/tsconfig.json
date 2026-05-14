@@ -18,6 +18,8 @@
         "name": "next"
       }
     ],
+    "types": ["node", "react", "react-dom", "estree"],
+    "typeRoots": ["./node_modules/@types"],
     "paths": {
       "@/*": ["./src/*"]
     }
